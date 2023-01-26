@@ -45,7 +45,8 @@ void main(void) {
             ADCON0bits.GO = 1;} //iniciar conversion
        Lcd_Set_Cursor(1,1);
        Lcd_Write_String("S1:");
-       Lcd_Set_Cursor(1,5);
+       
+       Lcd_Set_Cursor(1,6);
        Lcd_Write_String("S2:");
     }
 }
