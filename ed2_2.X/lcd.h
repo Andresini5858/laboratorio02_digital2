@@ -1,8 +1,7 @@
-#ifndef lcd
-#define	lcd
+
 
 #include <xc.h>
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 
 #define USE_CGRAM_LCD
 
@@ -36,5 +35,4 @@ void Lcd_NoBlink(void);
 void Lcd_CGRAM_CreateChar(char add, const char* chardata);
 void Lcd_CGRAM_Init(void);
 void Lcd_CGRAM_Close(void);
-#endif
 #endif

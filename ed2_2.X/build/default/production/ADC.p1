@@ -306,11 +306,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _ADC_setup ]
 [f ]
 "8
-[; ;ADC.c: 8:     ADCON0bits.ADCS1 = 1;
-[e = . . _ADCON0bits 1 7 -> -> 1 `i `uc ]
+[; ;ADC.c: 8:     ADCON0bits.ADCS1 = 0;
+[e = . . _ADCON0bits 1 7 -> -> 0 `i `uc ]
 "9
-[; ;ADC.c: 9:     ADCON0bits.ADCS0 = 0;
-[e = . . _ADCON0bits 1 6 -> -> 0 `i `uc ]
+[; ;ADC.c: 9:     ADCON0bits.ADCS0 = 1;
+[e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
 "11
 [; ;ADC.c: 11:     ADCON1bits.VCFG1 = 0;
 [e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
@@ -336,8 +336,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC.c: 21:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
 "22
-[; ;ADC.c: 22:     _delay((unsigned long)((100)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;ADC.c: 22:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 "23
 [; ;ADC.c: 23: }
 [e :UE 138 ]
@@ -545,15 +545,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 139 ]
 }
 "73
-[; ;ADC.c: 73: uint16_t ADC_read(uint16_t can){
-[v _ADC_read `(ui ~T0 @X0 1 ef1`ui ]
+[; ;ADC.c: 73: uint16_t ADC_read(char can){
+[v _ADC_read `(ui ~T0 @X0 1 ef1`uc ]
 {
 [e :U _ADC_read ]
-[v _can `ui ~T0 @X0 1 r1 ]
+[v _can `uc ~T0 @X0 1 r1 ]
 [f ]
 "74
 [; ;ADC.c: 74:     if (can == 0){
-[e $ ! == _can -> -> 0 `i `ui 169  ]
+[e $ ! == -> _can `i -> 0 `i 169  ]
 {
 "75
 [; ;ADC.c: 75:         ADCON0bits.CHS = 0b0000;
@@ -568,7 +568,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "78
 [; ;ADC.c: 78:     else if (can == 1){
 [e :U 169 ]
-[e $ ! == _can -> -> 1 `i `ui 171  ]
+[e $ ! == -> _can `i -> 1 `i 171  ]
 {
 "79
 [; ;ADC.c: 79:         ADCON0bits.CHS = 0b0001;
@@ -583,7 +583,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "82
 [; ;ADC.c: 82:     else if (can == 2){
 [e :U 171 ]
-[e $ ! == _can -> -> 2 `i `ui 173  ]
+[e $ ! == -> _can `i -> 2 `i 173  ]
 {
 "83
 [; ;ADC.c: 83:         ADCON0bits.CHS = 0b0010;
@@ -598,7 +598,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;ADC.c: 86:     else if (can == 3){
 [e :U 173 ]
-[e $ ! == _can -> -> 3 `i `ui 175  ]
+[e $ ! == -> _can `i -> 3 `i 175  ]
 {
 "87
 [; ;ADC.c: 87:         ADCON0bits.CHS = 0b0011;
@@ -613,7 +613,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "90
 [; ;ADC.c: 90:     else if (can == 4){
 [e :U 175 ]
-[e $ ! == _can -> -> 4 `i `ui 177  ]
+[e $ ! == -> _can `i -> 4 `i 177  ]
 {
 "91
 [; ;ADC.c: 91:         ADCON0bits.CHS = 0b0100;
@@ -628,7 +628,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "94
 [; ;ADC.c: 94:     else if (can == 5){
 [e :U 177 ]
-[e $ ! == _can -> -> 5 `i `ui 179  ]
+[e $ ! == -> _can `i -> 5 `i 179  ]
 {
 "95
 [; ;ADC.c: 95:         ADCON0bits.CHS = 0b0101;
@@ -643,7 +643,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "98
 [; ;ADC.c: 98:     else if (can == 6){
 [e :U 179 ]
-[e $ ! == _can -> -> 6 `i `ui 181  ]
+[e $ ! == -> _can `i -> 6 `i 181  ]
 {
 "99
 [; ;ADC.c: 99:         ADCON0bits.CHS = 0b0110;
@@ -658,7 +658,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "102
 [; ;ADC.c: 102:     else if (can == 7){
 [e :U 181 ]
-[e $ ! == _can -> -> 7 `i `ui 183  ]
+[e $ ! == -> _can `i -> 7 `i 183  ]
 {
 "103
 [; ;ADC.c: 103:         ADCON0bits.CHS = 0b0111;
@@ -673,7 +673,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "106
 [; ;ADC.c: 106:     else if (can == 8){
 [e :U 183 ]
-[e $ ! == _can -> -> 8 `i `ui 185  ]
+[e $ ! == -> _can `i -> 8 `i 185  ]
 {
 "107
 [; ;ADC.c: 107:         ADCON0bits.CHS = 0b1000;
@@ -688,7 +688,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "110
 [; ;ADC.c: 110:     else if (can == 9){
 [e :U 185 ]
-[e $ ! == _can -> -> 9 `i `ui 187  ]
+[e $ ! == -> _can `i -> 9 `i 187  ]
 {
 "111
 [; ;ADC.c: 111:         ADCON0bits.CHS = 0b1001;
@@ -703,7 +703,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "114
 [; ;ADC.c: 114:     else if (can == 10){
 [e :U 187 ]
-[e $ ! == _can -> -> 10 `i `ui 189  ]
+[e $ ! == -> _can `i -> 10 `i 189  ]
 {
 "115
 [; ;ADC.c: 115:         ADCON0bits.CHS = 0b1010;
@@ -718,7 +718,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "118
 [; ;ADC.c: 118:     else if (can == 11){
 [e :U 189 ]
-[e $ ! == _can -> -> 11 `i `ui 191  ]
+[e $ ! == -> _can `i -> 11 `i 191  ]
 {
 "119
 [; ;ADC.c: 119:         ADCON0bits.CHS = 0b1011;
@@ -733,7 +733,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "122
 [; ;ADC.c: 122:     else if (can == 12){
 [e :U 191 ]
-[e $ ! == _can -> -> 12 `i `ui 193  ]
+[e $ ! == -> _can `i -> 12 `i 193  ]
 {
 "123
 [; ;ADC.c: 123:         ADCON0bits.CHS = 0b1100;
@@ -748,7 +748,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "126
 [; ;ADC.c: 126:     else if (can == 13){
 [e :U 193 ]
-[e $ ! == _can -> -> 13 `i `ui 195  ]
+[e $ ! == -> _can `i -> 13 `i 195  ]
 {
 "127
 [; ;ADC.c: 127:         ADCON0bits.CHS = 0b1101;

@@ -10,7 +10,6 @@
 # 1 "./lcd.h" 1
 
 
-
 # 1 "E:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 1 3
 # 18 "E:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2628,8 +2627,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "E:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 5 "./lcd.h" 2
-# 23 "./lcd.h"
+# 4 "./lcd.h" 2
+# 22 "./lcd.h"
 void Lcd_Port(char a);
 void Lcd_Cmd(char a);
 void Lcd_Clear(void);
@@ -2662,7 +2661,7 @@ void Lcd_Cmd(char a)
     PORTBbits.RB2 = 0;
     Lcd_Port(a);
     PORTBbits.RB3 = 1;
-    _delay((unsigned long)((4)*(8000000/4000.0)));
+    _delay((unsigned long)((4)*(4000000/4000.0)));
     PORTBbits.RB3 = 0;
 }
 
@@ -2718,11 +2717,11 @@ void Lcd_Init(void)
  TRISBbits.TRISB6 = 0;
  TRISBbits.TRISB7 = 0;
     Lcd_Port(0x00);
-    _delay((unsigned long)((20)*(8000000/4000.0)));
+    _delay((unsigned long)((20)*(4000000/4000.0)));
     Lcd_Cmd(0x03);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
+    _delay((unsigned long)((5)*(4000000/4000.0)));
     Lcd_Cmd(0x03);
-    _delay((unsigned long)((11)*(8000000/4000.0)));
+    _delay((unsigned long)((11)*(4000000/4000.0)));
     Lcd_Cmd(0x03);
     Lcd_Cmd(0x02);
     Lcd_Cmd(0x02);
@@ -2742,11 +2741,11 @@ void Lcd_Write_Char(char a)
     PORTBbits.RB2 = 1;
     Lcd_Port(y>>4);
     PORTBbits.RB3 = 1;
-    _delay((unsigned long)((40)*(8000000/4000000.0)));
+    _delay((unsigned long)((40)*(4000000/4000000.0)));
     PORTBbits.RB3 = 0;
     Lcd_Port(temp);
     PORTBbits.RB3 = 1;
-    _delay((unsigned long)((40)*(8000000/4000000.0)));
+    _delay((unsigned long)((40)*(4000000/4000000.0)));
     PORTBbits.RB3 = 0;
 }
 

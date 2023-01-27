@@ -12,31 +12,46 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\ed2_2.X.production.o
-cinit CODE 0 F F A 2 1
+cinit CODE 0 15 15 15 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 373 373 1C 2 1
-text2 CODE 0 32A 32A 29 2 1
-text3 CODE 0 2C0 2C0 39 2 1
-text4 CODE 0 E5 E5 97 2 1
-text5 CODE 0 20D 20D 6F 2 1
-text6 CODE 0 3D1 3D1 D 2 1
-text7 CODE 0 38F 38F 1C 2 1
-text8 CODE 0 353 353 20 2 1
-text9 CODE 0 3AB 3AB 18 2 1
-text10 CODE 0 17C 17C 91 2 1
-text11 CODE 0 2F9 2F9 31 2 1
-text12 CODE 0 19 19 CC 2 1
-maintext CODE 0 27C 27C 44 2 1
-cstackCOMMON COMMON 1 70 70 7 1 1
-cstackBANK0 BANK0 1 20 20 A 1 1
-intentry CODE 0 4 4 8 2 1
-strings STRING 0 3C3 3C3 E 2 1
-bssCOMMON COMMON 1 77 77 6 1 1
+text1 CODE 0 EDA EDA 18 2 1
+text2 CODE 0 667 667 54 2 1
+text3 CODE 0 78D 78D 3F 2 1
+text4 CODE 0 37E 37E 97 2 1
+text5 CODE 0 533 533 70 2 1
+text6 CODE 0 EB5 EB5 D 2 1
+text7 CODE 0 F2C F2C 20 2 1
+text8 CODE 0 F0C F0C 20 2 1
+text9 CODE 0 EC2 EC2 18 2 1
+text10 CODE 0 415 415 91 2 1
+text11 CODE 0 2A 2A 1B7 2 1
+text12 CODE 0 74B 74B 42 2 1
+text13 CODE 0 7CC 7CC 33 2 1
+text14 CODE 0 4A6 4A6 8D 2 1
+text15 CODE 0 EF2 EF2 1A 2 1
+text16 CODE 0 F4C F4C 22 2 1
+text17 CODE 0 1E1 1E1 DC 2 1
+text18 CODE 0 FC4 FC4 3C 2 1
+text19 CODE 0 707 707 44 2 1
+text20 CODE 0 F93 F93 31 2 1
+text21 CODE 0 F6E F6E 25 2 1
+text22 CODE 0 5A3 5A3 69 2 1
+text23 CODE 0 60C 60C 5B 2 1
+text24 CODE 0 2BD 2BD C1 2 1
+maintext CODE 0 6BB 6BB 4C 2 1
+cstackCOMMON COMMON 1 70 70 E 1 1
+cstackBANK0 BANK0 1 20 20 1E 1 1
+cstackBANK1 BANK1 1 B4 B4 B 1 1
+intentry CODE 0 4 4 E 2 1
+bssBANK0 BANK0 1 3E 3E 15 1 1
+bssBANK1 BANK1 1 A0 A0 14 1 1
+strings STRING 0 800 800 2B 2 1
+clrtext CODE 0 EAD EAD 8 2 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
+$C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
-end_init CODE 0 C C 3 2 1
+end_init CODE 0 12 12 3 2 1
 config CONFIG 4 2007 2007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -44,30 +59,39 @@ config CONFIG 4 2007 2007 2 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 2A-6F 1
-RAM A0-EF 1
+RAM 53-6F 1
+RAM BF-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 2A-6F 1
-BANK1 A0-EF 1
+BANK0 53-6F 1
+BANK1 BF-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 3DE-1FFF 2
+CONST 7FF-7FF 2
+CONST 82B-EAC 2
+CONST 1000-1FFF 2
 ENTRY 3-3 2
-ENTRY 3DE-1FFF 2
+ENTRY 7FF-7FF 2
+ENTRY 82B-EAC 2
+ENTRY 1000-1FFF 2
 CODE 3-3 2
-CODE 3DE-1FFF 2
+CODE 7FF-7FF 2
+CODE 82B-EAC 2
+CODE 1000-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7D-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 3DE-1FFF 2
+STRCODE 7FF-7FF 2
+STRCODE 82B-EAC 2
+STRCODE 1000-1FFF 2
 STRING 3-3 2
-STRING 3DE-1FFF 2
+STRING 7FF-7FF 2
+STRING 82B-EAC 2
+STRING 1000-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -82,247 +106,517 @@ STRING 3DE-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ed2_2.X.production.o
-F cinit CODE >826:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-F cinit CODE >829:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-F cinit CODE >846:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-10 cinit CODE >847:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-11 cinit CODE >848:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-12 cinit CODE >849:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-13 cinit CODE >850:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-14 cinit CODE >851:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-15 cinit CODE >857:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-15 cinit CODE >859:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-16 cinit CODE >860:C:\Users\lemus\AppData\Local\Temp\xcAs66c.s
-4 intentry CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-19 text12 CODE >73:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-19 text12 CODE >74:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1F text12 CODE >75:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-23 text12 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-2A text12 CODE >77:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-2B text12 CODE >78:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-31 text12 CODE >79:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-38 text12 CODE >82:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3F text12 CODE >83:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-46 text12 CODE >86:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-4D text12 CODE >87:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-54 text12 CODE >90:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-5B text12 CODE >91:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-62 text12 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-69 text12 CODE >95:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-70 text12 CODE >98:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-77 text12 CODE >99:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-7E text12 CODE >102:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-85 text12 CODE >103:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-8C text12 CODE >106:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-93 text12 CODE >107:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-9A text12 CODE >110:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-A1 text12 CODE >111:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-A8 text12 CODE >114:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-AF text12 CODE >115:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-B6 text12 CODE >118:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-BD text12 CODE >119:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-C4 text12 CODE >122:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-CB text12 CODE >123:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-D2 text12 CODE >126:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-D9 text12 CODE >127:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-E0 text12 CODE >129:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-E0 text12 CODE >130:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-E4 text12 CODE >131:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-2F9 text11 CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-2F9 text11 CODE >54:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-2FF text11 CODE >55:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-300 text11 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-30C text11 CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-311 text11 CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-31E text11 CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-323 text11 CODE >61:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-17C text10 CODE >25:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-17F text10 CODE >26:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-184 text10 CODE >27:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-187 text10 CODE >28:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-188 text10 CODE >29:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-18D text10 CODE >30:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-190 text10 CODE >31:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-191 text10 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-197 text10 CODE >33:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-19A text10 CODE >34:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-19B text10 CODE >35:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1A1 text10 CODE >36:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1A4 text10 CODE >37:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1A5 text10 CODE >38:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1AB text10 CODE >39:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1AE text10 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1AF text10 CODE >41:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1B5 text10 CODE >42:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1B8 text10 CODE >43:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1B9 text10 CODE >44:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1BF text10 CODE >45:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1C2 text10 CODE >46:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1C3 text10 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1C9 text10 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1CC text10 CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1CD text10 CODE >50:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1D3 text10 CODE >51:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1D6 text10 CODE >52:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1D7 text10 CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1DD text10 CODE >54:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1E0 text10 CODE >55:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1E1 text10 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1E7 text10 CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1EA text10 CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1EB text10 CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1F1 text10 CODE >60:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1F4 text10 CODE >61:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1F5 text10 CODE >62:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1FB text10 CODE >63:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1FE text10 CODE >64:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-1FF text10 CODE >65:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-205 text10 CODE >66:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-208 text10 CODE >67:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-209 text10 CODE >68:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-209 text10 CODE >69:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-20C text10 CODE >71:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3AB text9 CODE >7:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3AB text9 CODE >8:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3AE text9 CODE >9:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3AF text9 CODE >11:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3B2 text9 CODE >12:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3B3 text9 CODE >14:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3B4 text9 CODE >16:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3B7 text9 CODE >17:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3B8 text9 CODE >18:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3B9 text9 CODE >19:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3BA text9 CODE >21:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3BB text9 CODE >22:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-3C2 text9 CODE >23:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
-353 text8 CODE >3:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-356 text8 CODE >5:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-35D text8 CODE >6:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-364 text8 CODE >7:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-36B text8 CODE >8:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-372 text8 CODE >9:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-38F text7 CODE >11:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-392 text7 CODE >13:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-393 text7 CODE >14:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-399 text7 CODE >15:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-39C text7 CODE >16:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-3A7 text7 CODE >17:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-3AA text7 CODE >18:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-3D1 text6 CODE >20:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-3D1 text6 CODE >22:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-3D7 text6 CODE >23:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-3DD text6 CODE >24:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-20D text5 CODE >63:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-20D text5 CODE >65:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-210 text5 CODE >66:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-211 text5 CODE >67:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-212 text5 CODE >68:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-213 text5 CODE >69:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-214 text5 CODE >70:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-215 text5 CODE >71:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-21B text5 CODE >72:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-225 text5 CODE >73:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-22B text5 CODE >74:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-235 text5 CODE >75:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-23B text5 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-246 text5 CODE >77:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-24C text5 CODE >78:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-252 text5 CODE >79:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-258 text5 CODE >80:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-25E text5 CODE >81:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-264 text5 CODE >82:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-26A text5 CODE >83:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-270 text5 CODE >84:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-276 text5 CODE >85:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-27B text5 CODE >86:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-E5 text4 CODE >26:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-E8 text4 CODE >29:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-ED text4 CODE >31:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-F0 text4 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-F3 text4 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-F6 text4 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-FA text4 CODE >33:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-FD text4 CODE >34:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-103 text4 CODE >35:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-10B text4 CODE >36:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-10C text4 CODE >37:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-112 text4 CODE >39:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-115 text4 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-118 text4 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-11B text4 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-11F text4 CODE >41:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-122 text4 CODE >42:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-128 text4 CODE >43:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-130 text4 CODE >44:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-131 text4 CODE >45:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-137 text4 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-13A text4 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-13D text4 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-140 text4 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-144 text4 CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-147 text4 CODE >50:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-14D text4 CODE >51:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-155 text4 CODE >52:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-156 text4 CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-15C text4 CODE >55:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-15F text4 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-162 text4 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-165 text4 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-169 text4 CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-16C text4 CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-172 text4 CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-17B text4 CODE >60:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-17B text4 CODE >61:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2C0 text3 CODE >88:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2C3 text3 CODE >91:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2C6 text3 CODE >92:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2C9 text3 CODE >93:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2CA text3 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2CD text3 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2D0 text3 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2D8 text3 CODE >95:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2DB text3 CODE >96:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2E2 text3 CODE >97:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2E5 text3 CODE >98:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2EB text3 CODE >99:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2EE text3 CODE >100:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2F5 text3 CODE >101:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-2F8 text3 CODE >102:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-32A text2 CODE >104:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-32D text2 CODE >107:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-330 text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-341 text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-34E text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-352 text2 CODE >109:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
-373 text1 CODE >63:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-373 text1 CODE >64:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-376 text1 CODE >67:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-379 text1 CODE >68:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-37A text1 CODE >70:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-37D text1 CODE >71:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-37E text1 CODE >72:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-37F text1 CODE >73:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-380 text1 CODE >75:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-381 text1 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-382 text1 CODE >77:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-385 text1 CODE >78:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-388 text1 CODE >80:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-38B text1 CODE >81:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-38C text1 CODE >82:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-38D text1 CODE >83:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-38E text1 CODE >84:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-27C maintext CODE >37:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-27C maintext CODE >38:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-281 maintext CODE >39:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-286 maintext CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-28C maintext CODE >41:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-292 maintext CODE >42:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-297 maintext CODE >44:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-29D maintext CODE >45:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-29E maintext CODE >46:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-2A6 maintext CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-2AC maintext CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
-2B6 maintext CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+15 cinit CODE >899:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+15 cinit CODE >902:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+15 cinit CODE >964:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+16 cinit CODE >965:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+17 cinit CODE >966:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+18 cinit CODE >967:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+19 cinit CODE >968:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+1E cinit CODE >971:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+1F cinit CODE >972:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+20 cinit CODE >973:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+21 cinit CODE >974:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+26 cinit CODE >980:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+26 cinit CODE >982:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+27 cinit CODE >983:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+4 intentry CODE >64:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+2BD text24 CODE >73:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2BE text24 CODE >74:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2C3 text24 CODE >75:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2C7 text24 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2CE text24 CODE >77:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2CF text24 CODE >78:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2D4 text24 CODE >79:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2DB text24 CODE >82:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2E1 text24 CODE >83:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2E8 text24 CODE >86:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2EE text24 CODE >87:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2F5 text24 CODE >90:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+2FB text24 CODE >91:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+302 text24 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+308 text24 CODE >95:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+30F text24 CODE >98:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+315 text24 CODE >99:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+31C text24 CODE >102:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+322 text24 CODE >103:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+329 text24 CODE >106:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+32F text24 CODE >107:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+336 text24 CODE >110:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+33C text24 CODE >111:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+343 text24 CODE >114:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+349 text24 CODE >115:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+350 text24 CODE >118:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+356 text24 CODE >119:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+35D text24 CODE >122:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+363 text24 CODE >123:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+36A text24 CODE >126:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+370 text24 CODE >127:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+377 text24 CODE >129:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+377 text24 CODE >130:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+37D text24 CODE >131:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+60C text23 CODE >5:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+60C text23 CODE >12:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+60D text23 CODE >13:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+613 text23 CODE >14:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+616 text23 CODE >14:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+618 text23 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+61A text23 CODE >17:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+61E text23 CODE >18:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+621 text23 CODE >18:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+623 text23 CODE >19:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+629 text23 CODE >20:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+62B text23 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+62C text23 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+62D text23 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+631 text23 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+633 text23 CODE >23:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+637 text23 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+63B text23 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+63D text23 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+641 text23 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+645 text23 CODE >27:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+648 text23 CODE >27:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+64B text23 CODE >28:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+64C text23 CODE >28:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+650 text23 CODE >28:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+652 text23 CODE >29:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+658 text23 CODE >31:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+65D text23 CODE >32:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+660 text23 CODE >32:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+662 text23 CODE >33:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+666 text23 CODE >34:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
+5A3 text22 CODE >5:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5A3 text22 CODE >13:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5A6 text22 CODE >14:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5AA text22 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5AD text22 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5AF text22 CODE >16:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5B1 text22 CODE >18:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5B5 text22 CODE >19:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5B8 text22 CODE >19:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5BA text22 CODE >20:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5BE text22 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5C0 text22 CODE >23:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5C6 text22 CODE >24:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5C8 text22 CODE >25:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5C9 text22 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5CA text22 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5CE text22 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5D0 text22 CODE >27:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5D4 text22 CODE >25:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5D8 text22 CODE >30:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5D9 text22 CODE >30:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5DD text22 CODE >30:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5DF text22 CODE >31:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5E1 text22 CODE >31:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5E5 text22 CODE >31:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5E9 text22 CODE >32:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5EC text22 CODE >32:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5EF text22 CODE >33:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5F0 text22 CODE >35:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5F1 text22 CODE >35:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5F5 text22 CODE >35:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5F7 text22 CODE >36:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+5FD text22 CODE >38:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+602 text22 CODE >39:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+605 text22 CODE >39:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+607 text22 CODE >40:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+60B text22 CODE >41:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
+F6E text21 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F6E text21 CODE >43:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F70 text21 CODE >45:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F74 text21 CODE >46:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F76 text21 CODE >46:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F7A text21 CODE >47:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F7B text21 CODE >47:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F7F text21 CODE >47:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F81 text21 CODE >48:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F82 text21 CODE >48:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F86 text21 CODE >48:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F88 text21 CODE >49:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F8E text21 CODE >52:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F92 text21 CODE >53:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
+F93 text20 CODE >46:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+F93 text20 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+F99 text20 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+FA1 text20 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+FA9 text20 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+707 text19 CODE >5:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+707 text19 CODE >13:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+709 text19 CODE >14:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+70F text19 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+711 text19 CODE >16:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+712 text19 CODE >17:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+713 text19 CODE >17:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+717 text19 CODE >17:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+719 text19 CODE >18:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+71D text19 CODE >16:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+721 text19 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+722 text19 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+726 text19 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+728 text19 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+72A text19 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+72E text19 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+732 text19 CODE >23:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+735 text19 CODE >23:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+738 text19 CODE >24:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+739 text19 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+73A text19 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+73E text19 CODE >26:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+740 text19 CODE >27:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+746 text19 CODE >29:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+74A text19 CODE >30:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+FC4 text18 CODE >5:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FC4 text18 CODE >12:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FCC text18 CODE >13:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FCE text18 CODE >14:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FCF text18 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FD0 text18 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FD4 text18 CODE >15:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FD6 text18 CODE >16:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FDA text18 CODE >14:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FDE text18 CODE >19:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FE0 text18 CODE >19:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FE4 text18 CODE >19:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FE8 text18 CODE >20:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FEB text18 CODE >20:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FEE text18 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FEF text18 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FF3 text18 CODE >21:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FF5 text18 CODE >22:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FFB text18 CODE >24:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+FFF text18 CODE >25:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+1E1 text17 CODE >505:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1E4 text17 CODE >550:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1E6 text17 CODE >553:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1E7 text17 CODE >555:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1ED text17 CODE >558:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1F6 text17 CODE >559:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1F7 text17 CODE >565:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+1F8 text17 CODE >848:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+207 text17 CODE >848:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+20C text17 CODE >848:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+20F text17 CODE >848:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+212 text17 CODE >848:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+215 text17 CODE >1285:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+221 text17 CODE >1287:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+225 text17 CODE >1288:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+229 text17 CODE >1289:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+22C text17 CODE >1289:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+22E text17 CODE >1331:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+230 text17 CODE >1332:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+243 text17 CODE >1332:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+247 text17 CODE >1332:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+24C text17 CODE >1333:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+256 text17 CODE >1464:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+25C text17 CODE >1465:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+265 text17 CODE >1498:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+267 text17 CODE >1500:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+268 text17 CODE >1515:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+296 text17 CODE >1550:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+29F text17 CODE >1500:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+2A8 text17 CODE >553:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+2B8 text17 CODE >1564:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+2BC text17 CODE >1567:E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
+F4C text16 CODE >3:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F4D text16 CODE >5:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F58 text16 CODE >6:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F5F text16 CODE >7:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F66 text16 CODE >8:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F6D text16 CODE >9:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EF2 text15 CODE >11:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EF3 text15 CODE >13:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EF6 text15 CODE >14:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EFC text15 CODE >15:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EFF text15 CODE >16:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F08 text15 CODE >17:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F0B text15 CODE >18:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4A6 text14 CODE >26:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4A7 text14 CODE >29:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4AC text14 CODE >31:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4AF text14 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4B2 text14 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4B5 text14 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4B9 text14 CODE >33:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4BC text14 CODE >34:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4C2 text14 CODE >35:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4C8 text14 CODE >36:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4C9 text14 CODE >37:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4CF text14 CODE >39:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4D2 text14 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4D5 text14 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4D8 text14 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4DC text14 CODE >41:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4DF text14 CODE >42:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4E5 text14 CODE >43:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4EB text14 CODE >44:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4EC text14 CODE >45:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4F2 text14 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4F5 text14 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4F8 text14 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4FB text14 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+4FF text14 CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+502 text14 CODE >50:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+508 text14 CODE >51:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+50E text14 CODE >52:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+50F text14 CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+515 text14 CODE >55:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+518 text14 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+51B text14 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+51E text14 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+522 text14 CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+525 text14 CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+52B text14 CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+532 text14 CODE >60:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+532 text14 CODE >61:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7CC text13 CODE >88:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7CD text13 CODE >91:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7D0 text13 CODE >92:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7D3 text13 CODE >93:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7D6 text13 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7D9 text13 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7DC text13 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7E4 text13 CODE >95:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7E7 text13 CODE >96:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7EB text13 CODE >97:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7EE text13 CODE >98:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7F4 text13 CODE >99:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7F7 text13 CODE >100:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7FB text13 CODE >101:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7FE text13 CODE >102:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+74B text12 CODE >104:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+74B text12 CODE >107:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+74E text12 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+753 text12 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+76C text12 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+775 text12 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+788 text12 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+78C text12 CODE >109:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+2A text11 CODE >64:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+2A text11 CODE >65:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+2E text11 CODE >66:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+33 text11 CODE >66:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+37 text11 CODE >67:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+43 text11 CODE >68:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+5D text11 CODE >69:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+80 text11 CODE >70:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+B2 text11 CODE >71:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+D7 text11 CODE >72:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+DF text11 CODE >73:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+F5 text11 CODE >74:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+FE text11 CODE >75:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+105 text11 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+10A text11 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+10E text11 CODE >77:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+11A text11 CODE >78:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+139 text11 CODE >79:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+159 text11 CODE >80:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+188 text11 CODE >81:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+1AA text11 CODE >82:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+1B2 text11 CODE >83:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+1C8 text11 CODE >84:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+1D1 text11 CODE >85:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+1D5 text11 CODE >86:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+1D6 text11 CODE >88:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+415 text10 CODE >25:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+418 text10 CODE >26:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+41D text10 CODE >27:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+420 text10 CODE >28:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+421 text10 CODE >29:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+426 text10 CODE >30:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+429 text10 CODE >31:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+42A text10 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+430 text10 CODE >33:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+433 text10 CODE >34:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+434 text10 CODE >35:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+43A text10 CODE >36:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+43D text10 CODE >37:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+43E text10 CODE >38:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+444 text10 CODE >39:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+447 text10 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+448 text10 CODE >41:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+44E text10 CODE >42:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+451 text10 CODE >43:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+452 text10 CODE >44:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+458 text10 CODE >45:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+45B text10 CODE >46:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+45C text10 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+462 text10 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+465 text10 CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+466 text10 CODE >50:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+46C text10 CODE >51:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+46F text10 CODE >52:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+470 text10 CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+476 text10 CODE >54:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+479 text10 CODE >55:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+47A text10 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+480 text10 CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+483 text10 CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+484 text10 CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+48A text10 CODE >60:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+48D text10 CODE >61:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+48E text10 CODE >62:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+494 text10 CODE >63:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+497 text10 CODE >64:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+498 text10 CODE >65:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+49E text10 CODE >66:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+4A1 text10 CODE >67:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+4A2 text10 CODE >68:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+4A2 text10 CODE >69:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+4A5 text10 CODE >71:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+EC2 text9 CODE >7:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+EC2 text9 CODE >8:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+EC5 text9 CODE >9:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+EC6 text9 CODE >11:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+EC9 text9 CODE >12:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ECA text9 CODE >14:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ECB text9 CODE >16:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ECE text9 CODE >17:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ECF text9 CODE >18:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ED0 text9 CODE >19:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ED1 text9 CODE >21:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ED2 text9 CODE >22:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+ED9 text9 CODE >23:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\ADC.c
+F0C text8 CODE >3:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F0F text8 CODE >5:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F16 text8 CODE >6:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F1D text8 CODE >7:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F24 text8 CODE >8:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F2B text8 CODE >9:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F2C text7 CODE >11:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F2F text7 CODE >13:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F32 text7 CODE >14:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F3A text7 CODE >15:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F3D text7 CODE >16:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F48 text7 CODE >17:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+F4B text7 CODE >18:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EB5 text6 CODE >20:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EB5 text6 CODE >22:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EBB text6 CODE >23:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EC1 text6 CODE >24:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+533 text5 CODE >63:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+533 text5 CODE >65:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+536 text5 CODE >66:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+537 text5 CODE >67:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+538 text5 CODE >68:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+539 text5 CODE >69:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+53A text5 CODE >70:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+53B text5 CODE >71:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+541 text5 CODE >72:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+54C text5 CODE >73:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+552 text5 CODE >74:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+55D text5 CODE >75:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+563 text5 CODE >76:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+56D text5 CODE >77:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+573 text5 CODE >78:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+579 text5 CODE >79:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+57F text5 CODE >80:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+585 text5 CODE >81:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+58B text5 CODE >82:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+591 text5 CODE >83:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+597 text5 CODE >84:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+59D text5 CODE >85:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+5A2 text5 CODE >86:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+37E text4 CODE >26:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+381 text4 CODE >29:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+386 text4 CODE >31:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+389 text4 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+38C text4 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+38F text4 CODE >32:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+393 text4 CODE >33:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+396 text4 CODE >34:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+39C text4 CODE >35:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3A4 text4 CODE >36:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3A5 text4 CODE >37:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3AB text4 CODE >39:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3AE text4 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3B1 text4 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3B4 text4 CODE >40:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3B8 text4 CODE >41:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3BB text4 CODE >42:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3C1 text4 CODE >43:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3C9 text4 CODE >44:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3CA text4 CODE >45:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3D0 text4 CODE >47:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3D3 text4 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3D6 text4 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3D9 text4 CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3DD text4 CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3E0 text4 CODE >50:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3E6 text4 CODE >51:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3EE text4 CODE >52:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3EF text4 CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3F5 text4 CODE >55:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3F8 text4 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3FB text4 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+3FE text4 CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+402 text4 CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+405 text4 CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+40B text4 CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+414 text4 CODE >60:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+414 text4 CODE >61:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+78D text3 CODE >88:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+790 text3 CODE >91:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+793 text3 CODE >92:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+796 text3 CODE >93:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+799 text3 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+79E text3 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7A1 text3 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7A9 text3 CODE >95:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7AC text3 CODE >96:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7B3 text3 CODE >97:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7B6 text3 CODE >98:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7BE text3 CODE >99:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7C1 text3 CODE >100:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7C8 text3 CODE >101:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+7CB text3 CODE >102:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+667 text2 CODE >104:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+667 text2 CODE >107:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+66C text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+673 text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+694 text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+69D text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+6B6 text2 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+6BA text2 CODE >109:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\lcd.c
+EDA text1 CODE >90:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EDA text1 CODE >91:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EDD text1 CODE >93:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE0 text1 CODE >94:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE1 text1 CODE >95:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE2 text1 CODE >97:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE5 text1 CODE >98:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE6 text1 CODE >99:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE7 text1 CODE >100:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE8 text1 CODE >102:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EE9 text1 CODE >103:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EEA text1 CODE >104:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EED text1 CODE >106:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EEE text1 CODE >107:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EEF text1 CODE >108:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EF0 text1 CODE >109:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EF1 text1 CODE >110:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6BB maintext CODE >49:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6BB maintext CODE >50:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6C0 maintext CODE >51:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6C5 maintext CODE >52:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6CB maintext CODE >53:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6D1 maintext CODE >54:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6D6 maintext CODE >56:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6E0 maintext CODE >57:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6EB maintext CODE >58:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6EE maintext CODE >59:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+6F8 maintext CODE >60:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X\main.c
+EAD clrtext CODE >951:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EAD clrtext CODE >952:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EAE clrtext CODE >953:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EAE clrtext CODE >954:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EAF clrtext CODE >955:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EB0 clrtext CODE >956:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EB1 clrtext CODE >957:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EB2 clrtext CODE >958:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EB3 clrtext CODE >959:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
+EB4 clrtext CODE >960:C:\Users\lemus\AppData\Local\Temp\xcAs6l4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -336,79 +630,121 @@ FD text4 CODE >34:C:\Users\lemus\Documents\GitHub\laboratorio02_digital2\ed2_2.X
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-__Hspace_0 3DE 0 ABS 0 - -
-__Hspace_1 7D 0 ABS 0 - -
+___awdiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+___lwmod@counter 25 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__Hspace_0 1000 0 ABS 0 - -
+__Hspace_1 BF 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
-_Lcd_Init 41A 0 CODE 0 text5 dist/default/production\ed2_2.X.production.o
-_Lcd_Port 6A6 0 CODE 0 text8 dist/default/production\ed2_2.X.production.o
-__end_of_ADC_setup 786 0 CODE 0 text9 dist/default/production\ed2_2.X.production.o
+_Lcd_Init A66 0 CODE 0 text5 dist/default/production\ed2_2.X.production.o
+_Lcd_Port 1E18 0 CODE 0 text8 dist/default/production\ed2_2.X.production.o
+__end_of_ADC_setup 1DB4 0 CODE 0 text9 dist/default/production\ed2_2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd_Init 4F8 0 CODE 0 text5 dist/default/production\ed2_2.X.production.o
-__end_of_Lcd_Port 6E6 0 CODE 0 text8 dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Init B46 0 CODE 0 text5 dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Port 1E58 0 CODE 0 text8 dist/default/production\ed2_2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-_main 4F8 0 CODE 0 maintext dist/default/production\ed2_2.X.production.o
+i1_Lcd_Set_Cursor 94C 0 CODE 0 text14 dist/default/production\ed2_2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+_main D76 0 CODE 0 maintext dist/default/production\ed2_2.X.production.o
+_vol1 52 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+_vol2 4A 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-_Lcd_Write_Char 580 0 CODE 0 text3 dist/default/production\ed2_2.X.production.o
-start 18 0 CODE 0 init C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-Lcd_Port@a 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
-_ADC_setup 756 0 CODE 0 text9 dist/default/production\ed2_2.X.production.o
-Lcd_Write_Char@temp 22 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+_Lcd_Write_Char F1A 0 CODE 0 text3 dist/default/production\ed2_2.X.production.o
+start 24 0 CODE 0 init C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+Lcd_Port@a 3D 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+_ADC_setup 1D84 0 CODE 0 text9 dist/default/production\ed2_2.X.production.o
+Lcd_Write_Char@temp B5 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+___awmod@sign 7D 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+__end_ofi1_Lcd_Write_String F1A 0 CODE 0 text12 dist/default/production\ed2_2.X.production.o
+i1Lcd_Set_Cursor@a 76 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1Lcd_Set_Cursor@b 74 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1Lcd_Set_Cursor@y 78 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1Lcd_Set_Cursor@z 77 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+___awdiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_Lcd_Write_Char 5F2 0 CODE 0 text3 dist/default/production\ed2_2.X.production.o
+_decima1 46 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+_decima2 40 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Write_Char F98 0 CODE 0 text3 dist/default/production\ed2_2.X.production.o
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\ed2_2.X.production.o
+___awdiv@dividend 78 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1_Lcd_Write_String E96 0 CODE 0 text12 dist/default/production\ed2_2.X.production.o
+__end_of___wmul 1F26 0 CODE 0 text21 dist/default/production\ed2_2.X.production.o
+__end_ofi1_Lcd_Set_Cursor A66 0 CODE 0 text14 dist/default/production\ed2_2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_ADC_read 32 0 CODE 0 text12 dist/default/production\ed2_2.X.production.o
-__end_of_ADC_read 1CA 0 CODE 0 text12 dist/default/production\ed2_2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-___stacklo 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-Lcd_Set_Cursor@temp 29 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-start_initialization 1E 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
+_ADC_read 57A 0 CODE 0 text24 dist/default/production\ed2_2.X.production.o
+___awdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+___lwmod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__end_of___awdiv C18 0 CODE 0 text22 dist/default/production\ed2_2.X.production.o
+__end_of___awmod CCE 0 CODE 0 text23 dist/default/production\ed2_2.X.production.o
+__end_of___lwdiv E96 0 CODE 0 text19 dist/default/production\ed2_2.X.production.o
+__end_of___lwmod 2000 0 CODE 0 text18 dist/default/production\ed2_2.X.production.o
+__end_of_ADC_read 6FC 0 CODE 0 text24 dist/default/production\ed2_2.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+___stacklo 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+_dpowers 1020 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+_centesima1 44 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+_centesima2 3E 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+___lwdiv@quotient 7B 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1Lcd_Cmd@a 73 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+Lcd_Set_Cursor@temp BC 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+___lwmod@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+start_initialization 2A 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-_Lcd_Write_String 654 0 CODE 0 text2 dist/default/production\ed2_2.X.production.o
+map@value 24 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+_Lcd_Write_String CCE 0 CODE 0 text2 dist/default/production\ed2_2.X.production.o
+clear_ram0 1D5A 0 CODE 0 clrtext dist/default/production\ed2_2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
+__pcstackBANK1 B4 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+_unidad1 48 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+_unidad2 42 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+i1Lcd_Write_Char@a 74 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1Lcd_Write_Char@y 73 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 32 0 CODE 0 cinit -
+__Hcinit 54 0 CODE 0 cinit -
 __Hidloc 4008 0 IDLOC 5 idloc -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 790 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+__stringbase 101E 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+___lwdiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
+i1Lcd_Write_String@a 75 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+i1Lcd_Write_String@i 7A 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+__end_of_sprintf 57A 0 CODE 0 text17 dist/default/production\ed2_2.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit 1E 0 CODE 0 cinit -
+__Lcinit 2A 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
-ADC_config@channel 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+ADC_config@channel 3D 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
 __Lstack 0 0 STACK 2 stack -
 _PORTBbits 6 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-_voltaje1 79 0 COMMON 1 bssCOMMON dist/default/production\ed2_2.X.production.o
-_voltaje2 77 0 COMMON 1 bssCOMMON dist/default/production\ed2_2.X.production.o
+i1_Lcd_Port 1E98 0 CODE 0 text16 dist/default/production\ed2_2.X.production.o
+_voltaje1 4E 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+_voltaje2 4C 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 18 0 CODE 0 init -
+__Hinit 24 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -416,102 +752,164 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 18 0 CODE 0 init -
+__Linit 24 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
+___wmul 1EDC 0 CODE 0 text21 dist/default/production\ed2_2.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 3DE 0 ABS 0 - -
-__S1 7D 0 ABS 0 - -
+__S0 1000 0 ABS 0 - -
+__S1 BF 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 5F2 0 CODE 0 text11 dist/default/production\ed2_2.X.production.o
+_isr 54 0 CODE 0 text11 dist/default/production\ed2_2.X.production.o
+_map 1F26 0 CODE 0 text20 dist/default/production\ed2_2.X.production.o
+i1_Lcd_Write_Char F98 0 CODE 0 text13 dist/default/production\ed2_2.X.production.o
 ?_ADC_read 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+_buffer A0 0 BANK1 1 bssBANK1 dist/default/production\ed2_2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-__end_of_Lcd_Write_String 6A6 0 CODE 0 text2 dist/default/production\ed2_2.X.production.o
-__end_of_isr 654 0 CODE 0 text11 dist/default/production\ed2_2.X.production.o
-__end_of_Lcd_Clear 7BC 0 CODE 0 text6 dist/default/production\ed2_2.X.production.o
+sprintf@val 33 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Write_String D76 0 CODE 0 text2 dist/default/production\ed2_2.X.production.o
+__end_of_isr 3C2 0 CODE 0 text11 dist/default/production\ed2_2.X.production.o
+__end_of_map 1F88 0 CODE 0 text20 dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Clear 1D84 0 CODE 0 text6 dist/default/production\ed2_2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab 786 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
-Lcd_Write_String@a 27 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-Lcd_Write_String@i 25 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\lemus\AppData\Local\Temp\xcAs66c.o
-__end_of_Lcd_Cmd 756 0 CODE 0 text7 dist/default/production\ed2_2.X.production.o
+__stringtab 1000 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+Lcd_Write_String@a B8 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+Lcd_Write_String@i BD 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\lemus\AppData\Local\Temp\xcAs6l4.o
+__end_ofi1_Lcd_Cmd 1E18 0 CODE 0 text15 dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Cmd 1E98 0 CODE 0 text7 dist/default/production\ed2_2.X.production.o
+i1Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+___awmod@counter 7C 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-__ptext10 2F8 0 CODE 0 text10 dist/default/production\ed2_2.X.production.o
-__ptext11 5F2 0 CODE 0 text11 dist/default/production\ed2_2.X.production.o
-__ptext12 32 0 CODE 0 text12 dist/default/production\ed2_2.X.production.o
-_Lcd_Clear 7A2 0 CODE 0 text6 dist/default/production\ed2_2.X.production.o
-_Lcd_Set_Cursor 1CA 0 CODE 0 text4 dist/default/production\ed2_2.X.production.o
-__pmaintext 4F8 0 CODE 0 maintext dist/default/production\ed2_2.X.production.o
+__end_ofi1_Lcd_Port 1EDC 0 CODE 0 text16 dist/default/production\ed2_2.X.production.o
+sprintf@flag 31 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+sprintf@prec 32 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__ptext10 82A 0 CODE 0 text10 dist/default/production\ed2_2.X.production.o
+__ptext11 54 0 CODE 0 text11 dist/default/production\ed2_2.X.production.o
+__ptext12 E96 0 CODE 0 text12 dist/default/production\ed2_2.X.production.o
+__ptext13 F98 0 CODE 0 text13 dist/default/production\ed2_2.X.production.o
+__ptext14 94C 0 CODE 0 text14 dist/default/production\ed2_2.X.production.o
+__ptext15 1DE4 0 CODE 0 text15 dist/default/production\ed2_2.X.production.o
+__ptext16 1E98 0 CODE 0 text16 dist/default/production\ed2_2.X.production.o
+__ptext17 3C2 0 CODE 0 text17 dist/default/production\ed2_2.X.production.o
+__ptext18 1F88 0 CODE 0 text18 dist/default/production\ed2_2.X.production.o
+__ptext19 E0E 0 CODE 0 text19 dist/default/production\ed2_2.X.production.o
+__ptext20 1F26 0 CODE 0 text20 dist/default/production\ed2_2.X.production.o
+__ptext21 1EDC 0 CODE 0 text21 dist/default/production\ed2_2.X.production.o
+__ptext22 B46 0 CODE 0 text22 dist/default/production\ed2_2.X.production.o
+__ptext23 C18 0 CODE 0 text23 dist/default/production\ed2_2.X.production.o
+__ptext24 57A 0 CODE 0 text24 dist/default/production\ed2_2.X.production.o
+_Lcd_Clear 1D6A 0 CODE 0 text6 dist/default/production\ed2_2.X.production.o
+___awdiv B46 0 CODE 0 text22 dist/default/production\ed2_2.X.production.o
+___awmod C18 0 CODE 0 text23 dist/default/production\ed2_2.X.production.o
+_Lcd_Set_Cursor 6FC 0 CODE 0 text4 dist/default/production\ed2_2.X.production.o
+___lwdiv E0E 0 CODE 0 text19 dist/default/production\ed2_2.X.production.o
+___lwmod 1F88 0 CODE 0 text18 dist/default/production\ed2_2.X.production.o
+i1_Lcd_Cmd 1DE4 0 CODE 0 text15 dist/default/production\ed2_2.X.production.o
+__pmaintext D76 0 CODE 0 maintext dist/default/production\ed2_2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+map@inputmax 28 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+map@inputmin 26 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+___lwdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+__end_ofi1_Lcd_Write_Char FFE 0 CODE 0 text13 dist/default/production\ed2_2.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-__end_of__stringtab 792 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+__end_of__stringtab 1020 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/default/production\ed2_2.X.production.o
-_ADC_config 2F8 0 CODE 0 text10 dist/default/production\ed2_2.X.production.o
+_ADC_config 82A 0 CODE 0 text10 dist/default/production\ed2_2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 _PIR1bits C 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-__Lend_init 18 0 CODE 0 end_init -
+__Lend_init 24 0 CODE 0 end_init -
+map@outmax 2C 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+map@outmin 2A 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 2A 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
-__end_of_Lcd_Set_Cursor 2F8 0 CODE 0 text4 dist/default/production\ed2_2.X.production.o
-__Hintentry 18 0 CODE 0 intentry -
-Lcd_Set_Cursor@a 26 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-Lcd_Set_Cursor@b 24 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-Lcd_Set_Cursor@y 28 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-Lcd_Set_Cursor@z 27 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+end_of_initialization 4C 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
+__end_of_Lcd_Set_Cursor 82A 0 CODE 0 text4 dist/default/production\ed2_2.X.production.o
+__Hintentry 24 0 CODE 0 intentry -
+Lcd_Set_Cursor@a B9 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+Lcd_Set_Cursor@b B7 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+Lcd_Set_Cursor@y BB 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+Lcd_Set_Cursor@z BA 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
 __Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+?___awdiv 76 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+?___awmod 24 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+___lwdiv@dividend 78 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+?___lwdiv 76 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+?___lwmod 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 6E6 0 CODE 0 text1 dist/default/production\ed2_2.X.production.o
-__ptext2 654 0 CODE 0 text2 dist/default/production\ed2_2.X.production.o
-__ptext3 580 0 CODE 0 text3 dist/default/production\ed2_2.X.production.o
-__ptext4 1CA 0 CODE 0 text4 dist/default/production\ed2_2.X.production.o
-__ptext5 41A 0 CODE 0 text5 dist/default/production\ed2_2.X.production.o
-__ptext6 7A2 0 CODE 0 text6 dist/default/production\ed2_2.X.production.o
-__ptext7 71E 0 CODE 0 text7 dist/default/production\ed2_2.X.production.o
-__ptext8 6A6 0 CODE 0 text8 dist/default/production\ed2_2.X.production.o
-__ptext9 756 0 CODE 0 text9 dist/default/production\ed2_2.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+___awmod@dividend 26 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__ptext1 1DB4 0 CODE 0 text1 dist/default/production\ed2_2.X.production.o
+__ptext2 CCE 0 CODE 0 text2 dist/default/production\ed2_2.X.production.o
+__ptext3 F1A 0 CODE 0 text3 dist/default/production\ed2_2.X.production.o
+__ptext4 6FC 0 CODE 0 text4 dist/default/production\ed2_2.X.production.o
+__ptext5 A66 0 CODE 0 text5 dist/default/production\ed2_2.X.production.o
+__ptext6 1D6A 0 CODE 0 text6 dist/default/production\ed2_2.X.production.o
+__ptext7 1E58 0 CODE 0 text7 dist/default/production\ed2_2.X.production.o
+__ptext8 1E18 0 CODE 0 text8 dist/default/production\ed2_2.X.production.o
+__ptext9 1D84 0 CODE 0 text9 dist/default/production\ed2_2.X.production.o
+_sprintf 3C2 0 CODE 0 text17 dist/default/production\ed2_2.X.production.o
+i1Lcd_Set_Cursor@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+sprintf@ap 30 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+sprintf@sp 35 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+i1Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 2A 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
-__end_of_ADC_config 41A 0 CODE 0 text10 dist/default/production\ed2_2.X.production.o
+__end_of__initialization 4C 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
+___awmod@divisor 24 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__end_of_ADC_config 94C 0 CODE 0 text10 dist/default/production\ed2_2.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-Lcd_Cmd@a 23 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+Lcd_Cmd@a B6 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 _ANSELbits 188 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
-__Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 580 0 CODE 0 maintext dist/default/production\ed2_2.X.production.o
+__Hend_init 2A 0 CODE 0 end_init -
+sprintf@c 36 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+sprintf@f 26 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+__end_of_main E0E 0 CODE 0 maintext dist/default/production\ed2_2.X.production.o
+__end_of_dpowers 1034 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+?_sprintf 26 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\ed2_2.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\ed2_2.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-__end_of_setup 71E 0 CODE 0 text1 dist/default/production\ed2_2.X.production.o
+__end_of_setup 1DE4 0 CODE 0 text1 dist/default/production\ed2_2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\ed2_2.X.production.o
-_setup 6E6 0 CODE 0 text1 dist/default/production\ed2_2.X.production.o
-_valor 7B 0 COMMON 1 bssCOMMON dist/default/production\ed2_2.X.production.o
+_setup 1DB4 0 CODE 0 text1 dist/default/production\ed2_2.X.production.o
+_valor 50 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\ed2_2.X.production.o
-_Lcd_Cmd 71E 0 CODE 0 text7 dist/default/production\ed2_2.X.production.o
-__initialization 1E 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
-__pstrings 786 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
-ADC_read@can 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+_Lcd_Cmd 1E58 0 CODE 0 text7 dist/default/production\ed2_2.X.production.o
+__initialization 2A 0 CODE 0 cinit dist/default/production\ed2_2.X.production.o
+__pbssBANK0 3E 0 BANK0 1 bssBANK0 dist/default/production\ed2_2.X.production.o
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\ed2_2.X.production.o
+__pstrings 1000 0 STRING 0 strings dist/default/production\ed2_2.X.production.o
+___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
+ADC_read@can 74 0 COMMON 1 cstackCOMMON dist/default/production\ed2_2.X.production.o
 _ANSELHbits 189 0 ABS 0 - dist/default/production\ed2_2.X.production.o
-Lcd_Write_Char@a 24 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
-Lcd_Write_Char@y 23 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.production.o
+Lcd_Write_Char@a B7 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
+Lcd_Write_Char@y B6 0 BANK1 1 cstackBANK1 dist/default/production\ed2_2.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -537,12 +935,23 @@ Lcd_Write_Char@y 23 0 BANK0 1 cstackBANK0 dist/default/production\ed2_2.X.produc
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text6 0 3D1 7A2 D 2
-cstackCOMMON 1 70 70 D 1
-cstackBANK0 1 20 20 A 1
-intentry 0 4 8 3BF 2
+text1 0 EDA 1DB4 18 2
+text6 0 EB5 1D6A D 2
+text7 0 F2C 1E58 20 2
+text8 0 F0C 1E18 20 2
+text9 0 EC2 1D84 18 2
+text15 0 EF2 1DE4 1A 2
+text16 0 F4C 1E98 22 2
+text18 0 FC4 1F88 3C 2
+text20 0 F93 1F26 31 2
+text21 0 F6E 1EDC 25 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 33 1
+intentry 0 4 8 7FB 2
 reset_vec 0 0 0 3 2
-strings 0 3C3 786 E 2
+bssBANK1 1 A0 A0 1F 1
+strings 0 800 1000 2B 2
+clrtext 0 EAD 1D5A 8 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

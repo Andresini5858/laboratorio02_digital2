@@ -2,11 +2,11 @@
 #include <stdint.h>
 #include "ADC.h"
 
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 
 void ADC_setup(void){
-    ADCON0bits.ADCS1 = 1; // Fosc/32        
-    ADCON0bits.ADCS0 = 0; //       
+    ADCON0bits.ADCS1 = 0; // Fosc/32        
+    ADCON0bits.ADCS0 = 1; //       
     
     ADCON1bits.VCFG1 = 0; // Referencia VSS (0 Volts)
     ADCON1bits.VCFG0 = 0; // Referencia VDD (5 Volts)
@@ -70,7 +70,7 @@ void ADC_config(uint8_t channel){
     }
 }
 
-uint16_t ADC_read(uint16_t can){
+uint16_t ADC_read(char can){
     if (can == 0){
         ADCON0bits.CHS = 0b0000;
         valor = ADRESH;

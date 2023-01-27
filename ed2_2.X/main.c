@@ -27,12 +27,24 @@
 #include "lcd.h"
 #include "ADC.h"
 
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 
 uint16_t voltaje1;
 uint16_t voltaje2;
+uint8_t vol1;
+unsigned int vol2;
+unsigned int unidad1;
+unsigned int decima1;
+unsigned int centesima1;
+unsigned int unidad2;
+unsigned int decima2;
+unsigned int centesima2;
+char buffer[20];
+
 
 void setup(void);
+uint8_t map(int value, int inputmin, int inputmax, int outmin, int outmax){ //función para mapear valores
+    return ((value - inputmin)*(outmax-outmin)) / (inputmax-inputmin)+outmin;}
 
 void main(void) {
     setup();
@@ -41,30 +53,44 @@ void main(void) {
     ADC_config(1);
     Lcd_Init();
     while(1){
-       if (ADCON0bits.GO == 0){ //Chequear si la conversión ya termino
-            ADCON0bits.GO = 1;} //iniciar conversion
-       Lcd_Set_Cursor(1,1);
-       Lcd_Write_String("S1:");
-       
-       Lcd_Set_Cursor(1,6);
-       Lcd_Write_String("S2:");
+        Lcd_Set_Cursor(1,8);
+        Lcd_Write_String("S2:");
+        ADCON0bits.GO = 1;
+        Lcd_Set_Cursor(1,1);
+        Lcd_Write_String("S1:");
     }
 }
 
 void __interrupt() isr(void){
     if (PIR1bits.ADIF == 1){
-        PIR1bits.ADIF = 0;
+        if (ADCON0bits.CHS == 0b0000){
         voltaje1 = ADC_read(0);
-        __delay_us(100);
-        voltaje2 = ADC_read(1); 
-        __delay_us(100);
+        vol1 = map(voltaje1, 0, 255, 0, 100);
+        unidad1 = (vol1*5)/100;
+        decima1 = ((vol1*5)/10)%10;
+        centesima1 = (vol1*5)%10;
+        Lcd_Set_Cursor(2,1);
+        sprintf(buffer, "%d.%d%dV", unidad1, decima1, centesima1);
+        Lcd_Write_String(buffer);
+        ADCON0bits.CHS = 0b0001;}
+        else if (ADCON0bits.CHS == 0b0001){
+        voltaje2 = ADC_read(1);
+        vol2 = map(voltaje2, 0, 255, 0, 100);
+        unidad2 = (vol2*5)/100;
+        decima2 = ((vol2*5)/10)%10;
+        centesima2 = (vol2*5)%10;
+        Lcd_Set_Cursor(2,7);
+        sprintf(buffer, "%d.%d%dV", unidad2, decima2, centesima2);
+        Lcd_Write_String(buffer);
+        ADCON0bits.CHS = 0b0000;}
+        PIR1bits.ADIF = 0; 
     }
 }
 
 void setup(void){
     ANSELH = 0;
     
-    //TRISB = 0;
+    TRISB = 0;
     TRISC = 0;
     TRISD = 0;
     
@@ -76,10 +102,9 @@ void setup(void){
     INTCONbits.GIE = 1; //Activar interrupciones globales
     INTCONbits.PEIE = 1; //Activar interrupciones periféricas
     PIE1bits.ADIE = 1; // Habiliar interrupcion del conversor ADC
-    PIR1bits.ADIF = 0; // Limpiar bandera de interrupción del ADC
     
-    OSCCONbits.IRCF2 = 1; //Oscilador a 8MHz
+    OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 1;
-    OSCCONbits.SCS = 1; //Oscialdor interno
+    OSCCONbits.IRCF0 = 0;
+    OSCCONbits.SCS = 1;
 }
