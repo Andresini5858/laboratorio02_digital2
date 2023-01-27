@@ -2804,6 +2804,7 @@ unsigned int unidad2;
 unsigned int decima2;
 unsigned int centesima2;
 char buffer[20];
+void cadena(char *cursor);
 
 
 void setup(void);
@@ -2816,12 +2817,15 @@ void main(void) {
     ADC_config(0);
     ADC_config(1);
     Lcd_Init();
+    Lcd_Clear();
     while(1){
+        ADCON0bits.GO = 1;
         Lcd_Set_Cursor(1,8);
         Lcd_Write_String("S2:");
-        ADCON0bits.GO = 1;
         Lcd_Set_Cursor(1,1);
         Lcd_Write_String("S1:");
+        Lcd_Set_Cursor(1,14);
+        Lcd_Write_String("S3:");
     }
 }
 
@@ -2834,7 +2838,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
         decima1 = ((vol1*5)/10)%10;
         centesima1 = (vol1*5)%10;
         Lcd_Set_Cursor(2,1);
-        sprintf(buffer, "%d.%d%dV", unidad1, decima1, centesima1);
+        sprintf(buffer, "%d.%d%dV " , unidad1 , decima1 , centesima1 );
         Lcd_Write_String(buffer);
         ADCON0bits.CHS = 0b0001;}
         else if (ADCON0bits.CHS == 0b0001){
@@ -2844,7 +2848,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
         decima2 = ((vol2*5)/10)%10;
         centesima2 = (vol2*5)%10;
         Lcd_Set_Cursor(2,7);
-        sprintf(buffer, "%d.%d%dV", unidad2, decima2, centesima2);
+        sprintf(buffer, "%d.%d%dV " , unidad2 , decima2 , centesima2 );
         Lcd_Write_String(buffer);
         ADCON0bits.CHS = 0b0000;}
         PIR1bits.ADIF = 0;
@@ -2871,4 +2875,13 @@ void setup(void){
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 0;
     OSCCONbits.SCS = 1;
+}
+
+
+void cadena(char *cursor){
+    while (*cursor != '\0'){
+        while (PIR1bits.TXIF == 0);
+            TXREG = *cursor;
+            *cursor++;
+    }
 }
