@@ -1,38 +1,82 @@
+/* 
+ * File: LCD.h  
+ * Se utiliz� y se adaptaron las librer�as de Ligo George 
+ * de la p�gina www.electrosome.com
+ * Enlace: https://electrosome.com/lcd-pic-mplab-xc8/
+ * Revision history: 
+ */
 
+// This is a guard condition so that contents of this file are not included
+// more than once.  
+#ifndef LCD_H
+#define	LCD_H
 
-#include <xc.h>
+#ifndef _XTAL_FREQ
 #define _XTAL_FREQ 4000000
+#endif
 
-#define USE_CGRAM_LCD
+#ifndef RS
+#define RS PORTDbits.RD6
+#endif
 
-#define RS PORTBbits.RB2
-#define EN PORTBbits.RB3
+#ifndef EN
+#define EN PORTDbits.RD7
+#endif
+
+#ifndef D0
+#define D0 PORTBbits.RB0
+#endif
+
+#ifndef D1
+#define D1 PORTBbits.RB1
+#endif
+
+#ifndef D2
+#define D2 PORTBbits.RB2
+#endif
+
+#ifndef D3
+#define D3 PORTBbits.RB3
+#endif
+
+#ifndef D4
 #define D4 PORTBbits.RB4
-#define D5 PORTBbits.RB5
-#define D6 PORTBbits.RB6
-#define D7 PORTBbits.RB7
+#endif
 
-#define RS_DIR TRISBbits.TRISB2
-#define EN_DIR TRISBbits.TRISB3
-#define D4_DIR TRISBbits.TRISB4
-#define D5_DIR TRISBbits.TRISB5
-#define D6_DIR TRISBbits.TRISB6
-#define D7_DIR TRISBbits.TRISB7
+#ifndef D5
+#define D5 PORTBbits.RB5
+#endif
+
+#ifndef D6
+#define D6 PORTBbits.RB6
+#endif
+
+#ifndef D7
+#define D7 PORTBbits.RB7
+#endif
+
+#include <xc.h> // include processor files - each processor file is guarded.  
+
+//LCD Functions Developed by electroSome
+
 
 void Lcd_Port(char a);
-void Lcd_Cmd(char a);
-void Lcd_Clear(void);
-void Lcd_Set_Cursor(char a, char b);
-void Lcd_Init(void);
-void Lcd_Write_Char(char a);
-void Lcd_Write_String(const char *a);
-void Lcd_Shift_Right(void);
-void Lcd_Shift_Left(void);
-void Lcd_Blink(void);
-void Lcd_NoBlink(void);
 
-#ifdef USE_CGRAM_LCD
-void Lcd_CGRAM_CreateChar(char add, const char* chardata);
-void Lcd_CGRAM_Init(void);
-void Lcd_CGRAM_Close(void);
-#endif
+void Lcd_Cmd(char a);
+
+void Lcd_Clear(void);
+
+void Lcd_Set_Cursor(char a, char b);
+
+void Lcd_Init(void);
+
+void Lcd_Write_Char(char a);
+
+void Lcd_Write_String(char *a);
+
+void Lcd_Shift_Right(void);
+
+void Lcd_Shift_Left(void);
+
+#endif	/* LCD_H */
+
